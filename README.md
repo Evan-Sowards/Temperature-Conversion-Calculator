@@ -44,19 +44,25 @@ Alternatively, the .html file could be hosted on a website for users to access w
 ### Instructions
 
 
-Blank
+When the webpage has been loaded, the user will be given the option to enter a temperature and guess (or student answer), and select units to convert from and to with dropdown menus.
 
-Correct
+![blank](https://github.com/Evan-Sowards/Temperature-Conversion-Calculator/blob/abe1902527ebe89ad9bc8931a274c128716bb268/pics/Capture1.JPG)
 
-![options](https://github.com/Evan-Sowards/BlackBoardTestMaker/blob/34918a85628fa41bb5fffd920a4e1bbf0e50902c/pics/options.PNG?raw=true)
+If the guess is correct, the program will tell the user.
 
-Incorrect
+![correct](https://github.com/Evan-Sowards/Temperature-Conversion-Calculator/blob/abe1902527ebe89ad9bc8931a274c128716bb268/pics/Capture2.JPG)
 
-Invalid 1
+If it isn't, the program will tell the user that, too.
 
-![options](https://github.com/Evan-Sowards/BlackBoardTestMaker/blob/34918a85628fa41bb5fffd920a4e1bbf0e50902c/pics/options.PNG?raw=true)
+![incorrect](https://github.com/Evan-Sowards/Temperature-Conversion-Calculator/blob/abe1902527ebe89ad9bc8931a274c128716bb268/pics/Capture3.JPG)
 
-Invalid 2
+If an invalid temperature (a temperature that isn't a number) is given, the program will account for that:
+
+![invalid1](https://github.com/Evan-Sowards/Temperature-Conversion-Calculator/blob/abe1902527ebe89ad9bc8931a274c128716bb268/pics/Capture4.JPG)
+
+The same goes for an invalid guess:
+
+![invalid2](https://github.com/Evan-Sowards/Temperature-Conversion-Calculator/blob/abe1902527ebe89ad9bc8931a274c128716bb268/pics/Capture5.JPG)
 
 
 
