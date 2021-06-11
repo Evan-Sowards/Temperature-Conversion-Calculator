@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head>
+<title>JavaScript Temperature Conversion Calculator </title>
+
+<script>
+
+function convert() {
+
+	var convert;
+	
+	convert = document.form1.conversion.value;
+
+	if (convert === "kelvin") {
+		toKelvin();
+	}
+	if (convert === "fahrenheit") {
+		toFahrenheit();
+	}
+	if (convert === "celsius") {
+		toCelsius();
+	}
+	if (convert === "rankine") {
+		toRankine();
+	}
+	
+		
+}
+
+function toKelvin() { // Converts whatever type was entered to Kelvin
+
+	var temp, ans, stud;
+	var units;
+	
+	units = document.form1.units.value;
+	
+	temp = parseFloat (document.form1.temperature.value);
+	stud = parseFloat (document.form1.student.value);
+	
+	if (isNaN(temp) || isNaN(stud)) { // Checks to make sure temperature and the student's input are numbers
+		document.form1.answer.value = "Invalid";
+		document.form1.grade.value = "Incorrect";
+	}
+	
+	else if (units === "kelvin") { // If converting from kelvin
+		temp = Math.round(temp * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (temp == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		document.form1.answer.value = temp;
+	}
+	
+	else if (units === "fahrenheit") { // Converting from fahrenheit
+		ans = ((temp - 32) / 1.8) + 273.15;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+		
+	else if (units === "celsius") { // Converting from celsius
+		ans = temp + 273.15;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+	else if (units === "rankine") { // Converting from rankine
+		ans = temp / 1.8;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+}
+
+function toFahrenheit() { // Converts whatever type was entered to Fahrenheit
+
+	var temp, ans, stud;
+	var units;
+	
+	units = document.form1.units.value;
+	
+	temp = parseFloat (document.form1.temperature.value);
+	stud = parseFloat (document.form1.student.value);
+	
+	if (isNaN(temp) || isNaN(stud)) { // Checks to make sure temperature and the student's input are numbers
+		document.form1.answer.value = "Invalid";
+		document.form1.grade.value = "Incorrect";
+	}
+	
+	else if (units === "fahrenheit") { // If converting from fahrenheit
+		temp = Math.round(temp * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (temp == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		document.form1.answer.value = temp;
+	}
+	
+	else if (units === "kelvin") { // Converting from kelvin
+		ans = ((temp - 273.15) * 1.8) + 32;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+		
+	else if (units === "celsius") { // Converting from celsius
+		ans = (temp * 1.8) + 32;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+	else if (units === "rankine") { // Converting from rankine
+		ans = temp - 459.67;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+}
+
+function toCelsius() { // Converts whatever type was entered to Celsius
+
+	var temp, ans, stud;
+	var units;
+	
+	units = document.form1.units.value;
+	
+	temp = parseFloat (document.form1.temperature.value);
+	stud = parseFloat (document.form1.student.value);
+	
+	if (isNaN(temp) || isNaN(stud)) { // Checks to make sure temperature and the student's input are numbers
+		document.form1.answer.value = "Invalid";
+		document.form1.grade.value = "Incorrect";
+	}
+	
+	else if (units === "celsius") { // If converting from celsius
+		temp = Math.round(temp * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (temp == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		document.form1.answer.value = temp;
+	}
+	
+	else if (units === "fahrenheit") { // Converting from fahrenheit
+		ans = ((temp - 32) / 1.8);
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+		
+	else if (units === "kelvin") { // Converting from kelvin
+		ans = temp - 273.15;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+	else if (units === "rankine") { // Converting from rankine
+		ans = (temp - 491.67) / 1.8;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+}
+
+function toRankine() { // Converts whatever type was entered to Rankine
+
+	var temp, ans, stud;
+	var units;
+	
+	units = document.form1.units.value;
+	
+	temp = parseFloat (document.form1.temperature.value);
+	stud = parseFloat (document.form1.student.value);
+	
+	if (isNaN(temp) || isNaN(stud)) { // Checks to make sure temperature and the student's input are numbers
+		document.form1.answer.value = "Invalid";
+		document.form1.grade.value = "Incorrect";
+	}
+	
+	else if (units === "rankine") { // If converting from rankine
+		temp = Math.round(temp * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (temp == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		document.form1.answer.value = temp;
+	}
+	
+	else if (units === "fahrenheit") { // Converting from fahrenheit
+		ans = temp + 459.67;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+		
+	else if (units === "celsius") { // Converting from celsius
+		ans = (temp + 273.15) * 1.8;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+	else if (units === "kelvin") { // Converting from kelvin
+		ans = temp * 1.8;
+		ans = Math.round(ans * 10) / 10;
+		stud = Math.round(stud * 10) / 10;
+		if (ans == stud) {
+			document.form1.grade.value = "Correct";
+		}
+		else {
+			document.form1.grade.value = "Incorrect";
+		}
+		
+		document.form1.answer.value = ans;
+	}
+	
+}
+
+</script>
+
+</head>
+
+<body style="padding:30px;">
+
+<h2> JavaScript Temperature Conversion Calculator </h2>
+<h3> by Evan Sowards </h3>
+
+
+<form name="form1">
+<div style="float:left">
+
+Temperature: <input type="text" name="temperature" size="10"> <p>
+
+<label for="units">Units:</label>
+  <select name="units" id="units">
+    <option value="kelvin">Kelvin</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="celsius">Celsius</option>
+    <option value="rankine">Rankine</option>
+  </select>
+  
+<p> 
+<label for="conversion">Choose units to convert to:</label>
+  <select name="conversion" id="conversion">
+    <option value="kelvin">Kelvin</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="celsius">Celsius</option>
+    <option value="rankine">Rankine</option>
+  </select>
+<p>
+
+Student Answer: <input type="text" name="student" size="10"> <p>
+<input type="button" value="Convert" onclick="convert()"> <p>
+Grade: <input type="text" name="grade" size="10"> <p>
+Correct Answer: <input type="text" name="answer" size="10"> <p>
+</div>
+</form>
+
+
+</body>
+</html>
